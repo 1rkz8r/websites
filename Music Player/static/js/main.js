@@ -36,7 +36,7 @@ document.querySelector(".play-btn").onclick = function() {
 	this.style.display = "none";
 	document.querySelector(".stop-btn").style.display = "inline-block";
 	interval = setInterval(() => {
-		if(currentTime >= duration) {
+		if(currentTime >= duration - 1) {
 			document.querySelector(".stop-btn").click();
 		}
 		currentTime++;
