@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100%;
+	font-family: "Dosis", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	text-align: center;
+}
+
+.music-container {
+	background: #f4e093;
+	padding: 10px;
+	width: fit-content;
+	box-shadow: 0 0 6px 0 #00000057;
+	border-radius: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	row-gap: 20px;
+	flex-direction: column;
+	min-width: 300px;
+}
+
+@keyframes rotate {
+	from {transform: rotate(0deg)}
+	50% {transform: rotate(180deg)}
+	100% {transform: rotate(360deg)}
+}
+
+.music-cover {
+	width: 250px;
+	height: 250px;
+	border-radius: 100%;
+	background: url("https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amFwYW4lMjBtb3VudGFpbnxlbnwwfHwwfHx8MA%3D%3D");
+	background-size: cover;
+	position: relative;
+	box-shadow: 0 0 8px 0 #00000063;
+	animation: 5s ease-in-out infinite rotate;
+	margin: 0 auto;
+}
+.music-cover > div {
+	border-radius: 100%;
+	background: black;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 0 6px 0 black;
+}
+
+.music-name {
+	margin-top: 10px;
+}
+
+.music-player-controls {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+}
+
+.progress-bar {
+	width: 100%;
+	user-select: none;
+	cursor: pointer;
+}
+
+.music-duration > p {
+	opacity: .8;
+}
+
+.controls {
+	margin-top: 5px;
+	text-align: center;
+}
+
+.controls > span:not(:first-child) {
+	margin-left: 20px;
+}
+
+.controls > span {
+	cursor: pointer;
+	width: 12px;
+}
+.controls > span:active {
+	opacity: .8;
+}
+
+.stop-btn {
+	display: none;
+}
